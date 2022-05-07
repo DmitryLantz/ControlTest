@@ -26,8 +26,6 @@
             }
         }
 
-        Console.WriteLine(counter);
-
         newArray = new string[counter]; // new array initialization
         counter = 0;
 
