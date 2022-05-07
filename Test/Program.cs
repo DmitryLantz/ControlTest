@@ -5,15 +5,40 @@
 {
     static void Main(string[] args)
     {
+        string[] initialArray = new string[] {"Russia", "123", "123456789$%^", "goose", "89", "@#", "98", "Elena", "Sqrt", "la", "fa" };
 
-        Method();
+        string[] newArray = CreateNewArray(initialArray); // method call
 
+        Console.WriteLine(String.Join(" ", newArray)); // printing elements of the newArray
     }
 
-    public static void Method() 
+    public static string[] CreateNewArray (string[] array) 
     {
+        string[] newArray;
 
-        Console.WriteLine("Hello World!");
+        int counter = 0;
+
+        foreach (var s in array) // counting the quantity of strings with length <= 3
+        {
+            if (s.Length <= 3) 
+            { 
+                counter++; 
+            }
+        }
+
+        Console.WriteLine(counter);
+
+        newArray = new string[counter]; // new array initialization
+        counter = 0;
+
+        foreach (var s in array) // adding the valid strings to the newArray
+        {
+            if (s.Length <= 3) 
+            {
+                newArray[counter++] = s;
+            }
+        }
+
+        return newArray; // returning
     }
-
 }
