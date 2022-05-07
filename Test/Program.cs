@@ -6,10 +6,14 @@
     static void Main(string[] args)
     {
 
-
+        Method();
 
     }
 
+    public static void Method() 
+    {
 
+        Console.WriteLine("Hello World!");
+    }
 
 }
