@@ -18,9 +18,9 @@
 
         int counter = 0;
 
-        foreach (var s in array) // counting the quantity of strings with length <= 3
+        for (int i = 0; i < array.Length; i++) // counting the quantity of strings with length <= 3
         {
-            if (s.Length <= 3) 
+            if (array[i].Length <= 3) 
             { 
                 counter++; 
             }
@@ -29,11 +29,11 @@
         newArray = new string[counter]; // new array initialization
         counter = 0;
 
-        foreach (var s in array) // adding the valid strings to the newArray
+        for (int i = 0; i < array.Length; i++) // adding the valid strings to the newArray
         {
-            if (s.Length <= 3) 
+            if (array[i].Length <= 3) 
             {
-                newArray[counter++] = s;
+                newArray[counter++] = array[i];
             }
         }
 
